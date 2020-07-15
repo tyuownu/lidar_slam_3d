@@ -15,9 +15,11 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 find_package(Eigen3 REQUIRED)
+set(G2O_ROOT /opt/ros/melodic)
 find_package(G2O REQUIRED)
 find_package(Cholmod REQUIRED)
 find_package(PCL REQUIRED)
+link_directories(${G2O_INCLUDE_DIR}/../lib)
 
 set(G2O_LIBS
   g2o_core g2o_stuff g2o_types_sba g2o_types_slam3d
